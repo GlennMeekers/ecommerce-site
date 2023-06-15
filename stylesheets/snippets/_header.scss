@@ -1,0 +1,64 @@
+@use "global" as *;
+
+/* Header Styles
+--------------------------------------------- */
+#header-global {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  background-color: $header-background-color;
+  padding: $line-global $offset-global;
+  z-index: 2;
+  @include flex-space-between;
+
+  .link-logo {
+    color: $black;
+  }
+}
+
+.header-nav-list {
+  margin-left: $offset-global;
+  display: inline-block;
+  li {
+    display: inline-block;
+    &:not(:first-of-type) {
+      margin-left: $line-global;
+    }
+  }
+  .text-link {
+    color: $light-black;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.header-right {
+  margin-top: 18px;
+  > * {
+    display: inline-block;
+    &:not(:first-child) {
+      margin-left: $line-global;
+    }
+  }
+}
+
+.cart-link {
+  .cart-item-count {
+    display: inline-block;
+    background-color: $text-colour;
+    min-width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    color: $white;
+  }
+
+  &:hover {
+    .cart-item-count {
+      background-color: $black;
+    }
+  }
+}

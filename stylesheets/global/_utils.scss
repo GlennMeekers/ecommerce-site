@@ -1,0 +1,118 @@
+@use "global" as *;
+
+/* Utility Classes
+--------------------------------------------- */
+
+.visually-hidden,
+%visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.wrapper {
+  padding-left: $offset-global;
+  padding-right: $offset-global;
+}
+
+.grid,
+%grid {
+  display: grid;
+  grid-column-gap: $gutter-global;
+  grid-row-gap: $gutter-global;
+
+  > * {
+    min-width: 0;
+    min-height: 0;
+  }
+
+  &.collapse {
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+}
+
+.two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-content {
+  min-height: 100vh;
+  padding: $gutter-global;
+  width: 50%;
+  margin-left: auto;
+  grid-template-rows: minmax(max-content, auto) minmax(min-content, max-content);
+}
+
+.sticky-side-image {
+  position: fixed;
+  left: 0;
+  top: $gutter-global;
+  bottom: $gutter-global;
+  width: 50%;
+  overflow: hidden;
+}
+
+.valign-center {
+  display: flex;
+  flex-direction: column;
+
+  & > *:first-child {
+    margin-top: auto;
+  }
+
+  & > *:last-child {
+    margin-bottom: auto;
+  }
+}
+
+.valign-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.ta-center {
+  text-align: center;
+  width: 100%;
+}
+
+.text-white {
+  color: $white;
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4 {
+    color: $white;
+  }
+
+  p,
+  .accent-color {
+    color: $text-colour-white;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+/* Responsive Styles
+--------------------------------------------- */
+
+@media only screen and (max-width: 1023px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}

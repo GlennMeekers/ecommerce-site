@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.hero-slideshow {
+  width: 100%;
+  height: calc(100vh - #{$header-height});
+  overflow: hidden;
+
+  .slideshow-wrap {
+    position: relative;
+    height: 100%;
+  }
+
+  .slide {
+    width: 100%;
+    height: calc(100vh - #{$header-height});
+    position: relative;
+    z-index: 0;
+    background-color: $light-white;
+  }
+
+  .slide-image {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slide-content {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    padding: $offset-global;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

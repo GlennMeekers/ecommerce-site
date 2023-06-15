@@ -1,0 +1,219 @@
+@use "global" as *;
+
+/* Styleguide
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: $headline-font;
+  color: $light-black;
+  font-weight: $type-bold;
+}
+
+h1,
+.h1 {
+  font-size: $type-headline-lg;
+  line-height: $line-global * 2;
+  margin-bottom: $line-global;
+}
+
+h2,
+.h2 {
+  line-height: $line-global;
+  font-size: $type-headline-med;
+}
+
+h3,
+.h3 {
+  line-height: $line-global;
+  font-size: $type-headline-sm;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+.p-large,
+.p-large p {
+  font-family: $text-font;
+  font-size: $type-body-lg;
+  line-height: $line-global * 2.2;
+}
+
+a {
+  text-decoration: none;
+  color: $text-colour;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+ol,
+ul {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul ul,
+ol ol {
+  margin: 0 0 12px;
+}
+
+ul li {
+  position: relative;
+  margin-bottom: 8px;
+  list-style-position: inside;
+}
+
+ol li {
+  list-style-type: numeric;
+  margin-bottom: 8px;
+  list-style-position: inside;
+}
+
+ul li ul,
+ul li ol,
+ol li ul,
+ol li ol {
+  padding-left: 16px;
+  margin: 8px 0;
+}
+
+p,
+ul,
+ol {
+  font-size: $type-body-med;
+  color: $text-colour;
+}
+
+/* Forms
+  --------------------------------------------- */
+
+label {
+  font-size: $type-body-med;
+  color: $text-colour-light;
+}
+
+select,
+button[type="submit"],
+.button,
+.quantity-button {
+  @include reset-input;
+  display: inline-block;
+}
+
+/* Styleguide
+--------------------------------------------- */
+
+.link-logo {
+  font-size: 55px;
+  display: inline-block;
+  width: 55px;
+}
+
+.text-link {
+  font-family: $text-font;
+  color: $text-colour;
+  fill: currentColor;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+button[type="submit"],
+.button {
+  padding: ($line-global/2) $line-global;
+  text-align: center;
+  font-size: $type-body-med;
+  line-height: $line-global;
+  background: $black;
+  color: $white;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    background: $light-black;
+    transition: $hover-transition;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  &.button-cta {
+    padding: $line-global;
+    width: 100%;
+  }
+
+  .text-white & {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+      color: $black;
+      background-color: darken($white, 10%);
+    }
+  }
+}
+
+.styled-select {
+  position: relative;
+  color: $text-colour;
+  select {
+    font-family: $text-font;
+    font-size: $type-body-med;
+    line-height: $line-global;
+    color: currentColor;
+    padding-right: $line-global;
+    width: 100%;
+  }
+
+  .inline-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    font-size: 0.8em;
+  }
+
+  .text-white & {
+    color: $text-colour-light-white;
+  }
+
+  &:hover {
+    color: $black;
+  }
+}
+
+blockquote {
+  p {
+    font-weight: $type-med;
+  }
+
+  cite {
+    display: block;
+    margin-top: $line-global;
+  }
+}

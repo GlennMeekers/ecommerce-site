@@ -1,0 +1,22 @@
+@use "global" as *;
+@use "global" as *;
+@use "global" as *;
+
+.product-card {
+  .link-to-product,
+  img {
+    display: block;
+  }
+
+  .card-info {
+    margin-top: $line-global;
+  }
+
+  .product-price {
+    text-align: right;
+  }
+
+  .card-info-top {
+    @include flex-space-between;
+  }
+}

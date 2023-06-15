@@ -1,0 +1,42 @@
+$headline-font: "Noto Serif", serif;
+$text-font: "IBM Plex Mono", monospace;
+
+$black: #000;
+$white: #fff;
+
+$light-black: #333;
+$light-white: #fafafa;
+
+$text-colour: #555555;
+$text-colour-white: #ccc;
+$text-colour-light: #707070;
+$text-colour-light-white: #aaa;
+
+$background-color: #f7f2ea;
+$header-background-color: #ffffff;
+$footer-background-color: #f4f4f4;
+
+$border-color: rgba(0, 0, 0, 0.15);
+$border-color-white: rgba(255, 255, 255, 0.15);
+
+$standard-border: 1px solid $border-color;
+$standard-border-white: 1px solid $border-color-white;
+
+$line-global: 20px;
+$gutter-global: $line-global * 2;
+$offset-global: $gutter-global;
+
+$header-height: $line-global * 5;
+$button-height: $line-global * 2;
+
+$type-headline-lg: 40px;
+$type-headline-med: 20px;
+$type-headline-sm: 15px;
+$type-body-lg: 30px;
+$type-body-med: 15px;
+
+$type-bold: 700;
+$type-med: 500;
+$type-book: 400;
+
+$hover-transition: 200ms ease;

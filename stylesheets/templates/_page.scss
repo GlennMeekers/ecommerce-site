@@ -1,0 +1,12 @@
+@use "global" as *;
+
+#page {
+  .page-content {
+    margin-top: $offset-global;
+  }
+
+  .page-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
